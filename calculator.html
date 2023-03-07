@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body onclick="setInputValue()">
+    <h1>Calculator</h1>
+    <div class="fast">
+        <div class="head">
+            <input type="text" id="result"maxlenght="10">
+        </div>
+        <div class="body">
+            <div>
+                <input type="button"class="btn"value="c" onclick="del()">
+                <input type="button"class="btn"value="+/-" onclick="cal('+/-')">
+                <input type="button"class="btn"value="%" onclick="cal('%')">
+                <input type="button"class="btn f"value="/" onclick="cal('/')">
+            </div>
+            <div>
+                <input type="button"class="btn"value="7" onclick="cal('7')">
+                <input type="button"class="btn"value="8" onclick="cal('8')">
+                <input type="button"class="btn"value="9" onclick="cal('9')">
+                <input type="button"class="btn f"value="x" onclick="cal('*')">
+            </div>
+            <div>
+                <input type="button"class="btn"value="4" onclick="cal('4')">
+                <input type="button"class="btn"value="5" onclick="cal('5')">
+                <input type="button"class="btn"value="6" onclick="cal('6')">
+                <input type="button"class="btn f"value="-" onclick="cal('-')">
+            </div>
+            <div>
+                <input type="button"class="btn"value="1" onclick="cal('1')">
+                <input type="button"class="btn"value="2" onclick="cal('2')">
+                <input type="button"class="btn"value="3" onclick="cal('3')">
+                <input type="button"class="btn f"value="+" onclick="cal('+')">
+            </div>
+            <div>
+                <input type="button"class="btn"value="0" onclick="cal('0')">
+                <input type="button"class="btn"value="." onclick="cal('.')">
+                <input type="button"class="btn"value="DEL" onclick="cal('DEL')">
+                <input type="button"class="btn r"value="=" onclick="res()">
+            </div>
+        </div>
+    </div>
+    <script>
+        function del(){
+          var dela=  document.getElementById("result").value="";
+        }
+        function cal(newvalue){
+            document.getElementById("result").value+=newvalue;
+        }
+        function res(){
+           var val= document.getElementById("result").value;
+         var a=  eval(val);
+          document.getElementById("result").value=a;
+        }
+    </script>
+</body>
+</html>
